@@ -85,5 +85,12 @@ ul li{
  padding: 8px;
  text-align: center;
  margin-right: 16px;
- text-decoration: line-through;
+}
+
+ul li p {
+    text-decoration: none;
+}
+
+ul li p.riscado {
+    text-decoration: line-through;
 }

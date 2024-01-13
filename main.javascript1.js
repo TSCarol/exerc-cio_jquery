@@ -2,11 +2,11 @@ $(document).ready(function() {
   
     $('header button').click(function(){
         $('form').slideDown();
-    })
+    });
 
     $('#botao-limpar').click(function(){
         $('form').slideUp();
-    })
+    });
 
     $('form').on('submit', function(e){
         e.preventDefault();
@@ -16,7 +16,12 @@ $(document).ready(function() {
         $('ul').append(novoItem);
         $(novoItem).fadeIn(1000);
         $('#text-novo').val('');
-    })
- })
+    });
+
+    $('ul').on('click', 'li', function(){
+        const paragrafo = $(this).find('p');
+        paragrafo.toggleClass('riscado');
+    });
+ });
 
 
